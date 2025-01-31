@@ -1,0 +1,18 @@
+{
+  "name": "the-soul-card-util",
+  "version": "0.0.4",
+  "description": "Balatro: A search util to locate cards for [The-Soul] seed analyzer",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "liam61",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com:liam61/the-soul-card-util.git"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
