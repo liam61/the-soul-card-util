@@ -1,6 +1,8 @@
 # the-soul-card-util
 
-Balatro: A search util to locate cards for [The-Soul] seed analyzer
+Balatro: A search util to locate cards for [The-Soul](https://mathisfun0.github.io/The-Soul/) seed analyzer
+
+小丑牌游戏工具：适用于 [The-Soul](https://mathisfun0.github.io/The-Soul/) 站点，帮助快速分析和定位目标卡牌
 
 ## 1. Snapshot（示意图）
 
