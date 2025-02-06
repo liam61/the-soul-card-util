@@ -12,6 +12,7 @@
 // @grant         GM_setValue
 // @grant         GM.setValue
 // @charset       UTF-8
+// @github        https://github.com/liam61/the-soul-card-util
 
 // @downloadURL https://update.greasyfork.org/scripts/525121/%E5%B0%8F%E4%B8%91%E7%89%8C%20Balatro%20%E5%8D%A1%E7%89%8C%E5%AE%9A%E4%BD%8D%E5%B7%A5%E5%85%B7.user.js
 // @updateURL https://update.greasyfork.org/scripts/525121/%E5%B0%8F%E4%B8%91%E7%89%8C%20Balatro%20%E5%8D%A1%E7%89%8C%E5%AE%9A%E4%BD%8D%E5%B7%A5%E5%85%B7.meta.js
