@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name          小丑牌 Balatro 卡牌定位工具
 // @namespace     balatro-soul-util
-// @version       0.0.5
+// @version       0.0.6
 // @description   The Soul 的搜索增强版，帮助快速定位目标牌和位置。内置 蓝图、头脑、可乐的搜索，其他自行调用函数找到 `window.findCardInAnte(底注, 英文牌名)`
 // @author        liam61
 // @match         mathisfun0.github.io/The-Soul/
@@ -52,7 +52,7 @@
    * @param {number} ante 底注
    * @param {string | string[]} targets 目标牌，可以是单张牌，也可以是多张牌数组。可选参数
    * @param {object} config 可选参数
-   * @param {'order' | 'card'} config.orderType 排序方式，order: 按照位置顺序，card: 按照牌的顺序
+   * @param {'index' | 'card'} config.orderBy 排序方式，index: 按照位置顺序，card: 按照牌的顺序
    * @param {'FlushFive' | 'HighCard'} config.preset 预设的牌组，FlushFive: 同花五条流，HighCard: 高牌流
    * @param {2 | 3 | 4} config.stockSize 牌库大小，默认 3
    */
@@ -78,7 +78,7 @@
       alert('[config error]: 配置选项应该是一个对象')
     }
 
-    const { orderType = 'order', preset = 'FlushFive', stockSize = 3 } = config || {}
+    const { orderBy = 'index', preset = 'FlushFive', stockSize = 3 } = config || {}
 
     // ==Utils==
     const parsePresetCard = (item) => {
@@ -154,18 +154,21 @@
     // TODO: optimize algorithm
     const targetLists = finalTargets.map((target) => findIndexOfCard(ante, target))
 
-    if (orderType === 'card') {
-      targetLists.sort((list1, list2) => list1[0]?.index - list2[0]?.index).forEach(print)
-    } else if (orderType === 'order') {
-      const orderedList = targetLists
+    let results = []
+    if (orderBy === 'card') {
+      results = targetLists.sort((list1, list2) => list1[0]?.index - list2[0]?.index)
+      results.forEach(print)
+    } else if (orderBy === 'index') {
+      results = targetLists
         .reduce((arr, item) => {
           arr.push(...item)
           return arr
         }, [])
         .sort((item1, item2) => item1.index - item2.index)
-
-      print(orderedList)
+      print(results)
     }
+
+    return results
   }
   // ==/Output==
 
@@ -179,4 +182,4 @@
   // ==/Export==
 
   global.findCardsInAllAntes({ preset: 'LiamsFlushFive' })
-})(window)
+})(typeof unsafeWindow !== 'undefined' ? unsafeWindow : window)

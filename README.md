@@ -18,7 +18,7 @@ window.findCardsInAllAntes(/* the cards you want to find */)
 window.findCardsInAnte(6, ['Blueprint', 'Brainstorm', 'Diet Cola'])
 
 // or use preset config to find cards
-window.findCardsInAnte(13, { preset: 'HighCard' })
+window.findCardsInAnte(13, { preset: 'HighCard', orderBy: 'card' })
 ```
 
 ### 2.1 api
@@ -29,7 +29,7 @@ window.findCardsInAnte(13, { preset: 'HighCard' })
  * @param {number} ante 底注
  * @param {string | string[]} targets 目标牌，可以是单张牌，也可以是多张牌数组。可选参数
  * @param {object} config 可选参数
- * @param {'order' | 'card'} config.orderType 排序方式，order: 按照位置顺序，card: 按照牌的顺序
+ * @param {'index' | 'card'} config.orderBy 排序方式，index: 按照位置顺序，card: 按照牌的顺序
  * @param {'FlushFive' | 'HighCard'} config.preset 预设的牌组，FlushFive: 同花五条流，HighCard: 高牌流
  * @param {2 | 3 | 4} config.stockSize 牌库大小，默认 3
  */
