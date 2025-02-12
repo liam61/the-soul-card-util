@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name          小丑牌 Balatro 卡牌定位工具
 // @namespace     balatro-soul-util
-// @version       0.0.6
+// @version       0.0.7
 // @description   The Soul 的搜索增强版，帮助快速定位目标牌和位置。内置 蓝图、头脑、可乐的搜索，其他自行调用函数找到 `window.findCardInAnte(底注, 英文牌名)`
 // @author        liam61
 // @match         mathisfun0.github.io/The-Soul/
@@ -34,16 +34,16 @@
       'Brainstorm',
       'Diet Cola',
       { card: 'Scary Face', range: [1, 10] },
-      { card: 'Hanging Chad', range: [1, 18] },
-      { card: 'Photograph', range: [1, 18] },
+      { card: 'Hanging Chad', range: [1, 16] },
+      { card: 'Photograph', range: [1, 16] },
 
-      { card: 'Midas Mask', range: [6, 9] },
-      { card: 'Golden Ticket', range: [8, 33] },
-      { card: 'Seance', range: [8, 10] },
+      { card: 'Midas Mask', range: [6, 10] },
+      { card: 'Seance', range: [8, 11] },
+      { card: 'Golden Ticket', range: [8, maxAnte] },
 
-      { card: 'Showman', range: [10, 33] },
-      { card: 'Sock and Buskin', range: [16, 33] },
-      { card: 'The Idol', range: [18, 33] },
+      { card: 'Showman', range: [9, maxAnte] },
+      { card: 'Sock and Buskin', range: [10, maxAnte] },
+      { card: 'The Idol', range: [18, maxAnte] },
     ],
   }
 
@@ -119,7 +119,7 @@
       const arr = [...cardListEl.children].reduce((arr, cardEl, index) => {
         const el = cardEl.querySelector('div')
 
-        if (el.textContent.includes(card)) {
+        if (el.textContent.toLowerCase().includes(card.toLowerCase())) {
           arr.push({ card, index })
         }
         return arr
