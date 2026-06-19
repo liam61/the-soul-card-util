@@ -1,8 +1,8 @@
 # the-soul-card-util
 
-Balatro: A search util to locate cards for [The-Soul](https://spectralpack.github.io/The-Soul/) seed analyzer
+Balatro: A search util to locate cards for [The-Soul](https://spectralpack.github.io/TheSoul/) seed analyzer
 
-小丑牌游戏工具：适用于 [The-Soul](https://spectralpack.github.io/The-Soul/) 站点，帮助快速分析和定位目标卡牌
+小丑牌游戏工具：适用于 [The-Soul](https://spectralpack.github.io/TheSoul/) 站点，帮助快速分析和定位目标卡牌
 
 ## 1. Snapshot（示意图）
 
@@ -38,7 +38,7 @@ const findCardsInAnte = (ante, targets = [], config) => {}
 
 ## 3. Tampermonkey Extension（油猴插件）
 
-use for website [The-Soul](https://spectralpack.github.io/The-Soul/)
+use for website [The-Soul](https://spectralpack.github.io/TheSoul/)
 
 [小丑牌 Balatro 卡牌定位工具](https://greasyfork.org/zh-CN/scripts/525121-%E5%B0%8F%E4%B8%91%E7%89%8C-balatro-%E5%8D%A1%E7%89%8C%E5%AE%9A%E4%BD%8D%E5%B7%A5%E5%85%B7)
 

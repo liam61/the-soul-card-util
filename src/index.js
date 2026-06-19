@@ -1,10 +1,10 @@
 // ==UserScript==
 // @name          小丑牌 Balatro 卡牌定位工具
 // @namespace     balatro-soul-util
-// @version       0.1.0
+// @version       0.1.1
 // @description   The Soul 的搜索增强版，帮助快速定位目标牌和位置。内置 蓝图、头脑、可乐的搜索，其他自行调用函数找到 `window.findCardInAnte(底注, 英文牌名)`
 // @author        liam61
-// @match         spectralpack.github.io/The-Soul/
+// @match         spectralpack.github.io/TheSoul/
 // @license       MIT
 // @grant         unsafeWindow
 // @grant         GM_getValue

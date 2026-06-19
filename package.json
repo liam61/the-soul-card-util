@@ -1,6 +1,6 @@
 {
   "name": "the-soul-card-util",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Balatro: A search util to locate cards for [The-Soul] seed analyzer",
   "main": "src/index.js",
   "scripts": {
